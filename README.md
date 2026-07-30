@@ -25,10 +25,10 @@ The two repositories sync frequently. Content changes in one are reflected in th
 
 Here are some resources to help you get started with open source contributions:
 
-* [Finding ways to contribute to open source on Clrkis](https://docs.clrkis.com/en/get-started/exploring-projects-on-clrkis/finding-ways-to-contribute-to-open-source-on-clrkis)
-* [Set up Git](https://docs.clrkis.com/en/get-started/git-basics/set-up-git)
-* [Clrkis flow](https://docs.clrkis.com/en/get-started/using-clrkis/clrkis-flow)
-* [Collaborating with pull requests](https://docs.clrkis.com/en/clrkis/collaborating-with-pull-requests)
+* [Finding ways to contribute to open source on GitHub](https://docs.github.com/en/get-started/exploring-projects-on-github/finding-ways-to-contribute-to-open-source-on-github)
+* [Set up Git](https://docs.github.com/en/get-started/git-basics/set-up-git)
+* [GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow)
+* [Collaborating with pull requests](https://docs.github.com/en/github/collaborating-with-pull-requests)
 
 ## License
 
