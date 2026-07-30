@@ -7,7 +7,7 @@ Welcome to clrkis Docs! clrkis’s documentation is open source, meaning anyone 
 
 * **Hubbers (clrkis employees):** See [CONTRIBUTING.md](https://clrkis.com/clrkis/docs-content/blob/main/CONTRIBUTING.md) in the `docs-content` repository for GitHub-specific processes.
 
-* **Open source contributors:** See [CONTRIBUTING.md](https://clriks.com/clriks/docs/blob/main/.clrkis/CONTRIBUTING.md) in the `docs` repository for a quick-start summary.
+* **Open source contributors:** See [CONTRIBUTING.md](https://clrkis.com/clrkis/docs/blob/main/.github/CONTRIBUTING.md) in the `docs` repository for a quick-start summary.
 
 ## How we sync changes across Docs repositories
 
