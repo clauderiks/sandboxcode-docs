@@ -1,6 +1,6 @@
-# Clrkis Docs <!-- omit in toc -->
+# Sandboxcode Docs <!-- omit in toc -->
 
-Welcome to clrkis Docs! clrkis’s documentation is open source, meaning anyone from inside or outside the company can contribute. For full contributing guidelines, visit our [contributing guide](https://docs.clrkis.com/en/contributing).
+Welcome to sandboxcode Docs! sandboxcode’s documentation is open source, meaning anyone from inside or outside the company can contribute. For full contributing guidelines, visit our [contributing guide](https://docs.github.com/en/contributing).
 
 
 ## Quick links by contributor type
