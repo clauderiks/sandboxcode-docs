@@ -3137,10 +3137,22 @@
       "requestPath": "/enterprises/{enterprise}/credential-authorizations/revoke-all"
     },
     {
+      "slug": "revoke-a-single-credential-type-for-an-enterprise",
+      "subcategory": "credential-authorizations",
+      "verb": "post",
+      "requestPath": "/enterprises/{enterprise}/credential-authorizations/revoke-credential-type"
+    },
+    {
       "slug": "revoke-credential-authorizations-for-a-user-in-an-enterprise",
       "subcategory": "credential-authorizations",
       "verb": "post",
       "requestPath": "/enterprises/{enterprise}/credential-authorizations/{username}/revoke"
+    },
+    {
+      "slug": "revoke-a-single-credential-type-for-a-user-in-an-enterprise",
+      "subcategory": "credential-authorizations",
+      "verb": "post",
+      "requestPath": "/enterprises/{enterprise}/credential-authorizations/{username}/revoke-credential-type"
     },
     {
       "slug": "get-all-enterprise-roles-for-an-enterprise",
@@ -3925,6 +3937,24 @@
       "subcategory": "sub-issues",
       "verb": "patch",
       "requestPath": "/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority"
+    },
+    {
+      "slug": "list-issue-suggestions",
+      "subcategory": "issues",
+      "verb": "get",
+      "requestPath": "/repos/{owner}/{repo}/issues/{issue_number}/suggestions"
+    },
+    {
+      "slug": "approve-an-issue-suggestion",
+      "subcategory": "issues",
+      "verb": "post",
+      "requestPath": "/repos/{owner}/{repo}/issues/{issue_number}/suggestions/{suggestion_id}/approve"
+    },
+    {
+      "slug": "dismiss-an-issue-suggestion",
+      "subcategory": "issues",
+      "verb": "post",
+      "requestPath": "/repos/{owner}/{repo}/issues/{issue_number}/suggestions/{suggestion_id}/dismiss"
     },
     {
       "slug": "list-timeline-events-for-an-issue",
