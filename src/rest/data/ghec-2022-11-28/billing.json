@@ -2266,7 +2266,7 @@
         {
           "type": "string",
           "name": "name",
-          "description": "<p>The new name for the cost center</p>"
+          "description": "<p>The new name for the cost center. Optional.</p>"
         },
         {
           "type": "boolean",
