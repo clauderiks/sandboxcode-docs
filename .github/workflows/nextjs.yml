@@ -1,0 +1,77 @@
+
+name: Deploy Next.js site to Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout mã nguồn
+        uses: actions/checkout@v4
+
+      - name: Kiểm tra cấu hình Next.js và tự động sửa đuôi file
+        run: |
+          if [ -f "next.config.js" ]; then
+            echo "Phát hiện file next.config.js, tự động chuyển đổi sang .cjs để sửa lỗi ES Module Scope..."
+            mv next.config.js next.config.cjs
+          fi
+
+      - name: Thiết lập môi trường Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: ${{ hashFiles('package-lock.json') != '' && 'npm' || '' }}
+
+      - name: Khởi tạo cấu hình GitHub Pages tĩnh
+        uses: actions/configure-pages@v5
+
+      - name: Cài đặt các gói phụ thuộc (Dependencies)
+        run: |
+          if [ -f "package-lock.json" ]; then
+            npm ci
+          else
+            npm install
+          fi
+
+      - name: Biên dịch dự án Next.js
+        run: npx next build
+
+      - name: Xác định thư mục xuất bản (out hoặc .next)
+        id: determine-path
+        run: |
+          if [ -d "out" ]; then
+            echo "dir=./out" >> $GITHUB_OUTPUT
+          elif [ -d ".next" ]; then
+            echo "dir=./.next" >> $GITHUB_OUTPUT
+          else
+            echo "dir=./" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Tải tệp tin tĩnh lên bộ nhớ đệm GitHub
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ steps.determine-path.outputs.dir }}
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Triển khai trực tiếp lên GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
