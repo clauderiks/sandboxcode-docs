@@ -2534,7 +2534,7 @@
         },
         {
           "httpStatusCode": "422",
-          "description": "<p>Validation failed, or the endpoint has been spammed.</p>"
+          "description": "<p>Validation failed.</p>"
         },
         {
           "httpStatusCode": "500",
